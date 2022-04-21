@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingvertical">6dp</dimen>
+    <dimen name="paddinghorizontal">18dp</dimen>
+    <dimen name="marginend">18dp</dimen>
+    <dimen name="marginhorizontal">18dp</dimen>
+    <dimen name="paddingstart">32dp</dimen>
+
+</resources>
