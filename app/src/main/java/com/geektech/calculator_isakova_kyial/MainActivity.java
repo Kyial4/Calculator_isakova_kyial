@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private Integer firstVar, secondVar;
     private boolean isOperationClick;
-    String operator="";
+    String operator = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,44 +81,44 @@ public class MainActivity extends AppCompatActivity {
                 isOperationClick = true;
                 break;
         }*/
-    public void operation(View view) {
+    public void onClickOperation(View view) {
         isOperationClick = true;
-     firstVar= Integer.parseInt(textView.getText().toString());
-        switch (view.getId()){
+        firstVar = Integer.parseInt(textView.getText().toString());
+        switch (view.getId()) {
             case R.id.btn_minus:
-                operator="-";
+                operator = "-";
                 break;
             case R.id.btn_plus:
-                operator="+";
+                operator = "+";
                 break;
             case R.id.btn_division:
-                operator="/";
+                operator = "/";
                 break;
             case R.id.btn_multiplication:
-                operator="*";
+                operator = "*";
+                break;
+    }
+    }
+
+    public void onclickEqual(View view) {
+        secondVar = Integer.parseInt(textView.getText().toString());
+        Integer result = 0;
+        switch (operator) {
+            case "-":
+                result = firstVar - secondVar;
+                break;
+            case "+":
+                result = firstVar + secondVar;
+                break;
+            case "*":
+                result = firstVar * secondVar;
+                break;
+            case "/":
+                result = firstVar / secondVar;
                 break;
         }
+        textView.setText(result + "");
     }
-    public void clickEqual(View view) {
-       secondVar=Integer.parseInt(textView.getText().toString());
-        Integer result = 0;
-            switch (operator) {
-                case "-":
-                    result = firstVar - secondVar ;
-                    break;
-                case "+":
-                    result = firstVar + secondVar ;
-                    break;
-                case "*":
-                    result = firstVar * secondVar ;
-                    break;
-                case "/":
-                    result = firstVar / secondVar ;
-                    break;
-            }
-            textView.setText(result + "");
-        }
-
 
 
     private void setNumber(String number) {
@@ -133,4 +133,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-}
+
+    }
