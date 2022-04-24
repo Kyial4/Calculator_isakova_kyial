@@ -2,8 +2,10 @@ package com.geektech.calculator_isakova_kyial;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,12 +13,15 @@ public class MainActivity extends AppCompatActivity {
     private Integer firstVar, secondVar;
     private boolean isOperationClick;
     String operator = "";
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_view);
+        button= findViewById(R.id.btn_toActivity);
+        button.setVisibility(View.INVISIBLE);
     }
 
 
@@ -55,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
         }
+        button.setVisibility(View.INVISIBLE);
 
     }
 
@@ -97,11 +103,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_multiplication:
                 operator = "*";
                 break;
-    }
+        }
+        button.setVisibility(View.INVISIBLE);
     }
 
     public void onclickEqual(View view) {
-        secondVar = Integer.parseInt(textView.getText().toString());
+       secondVar = Integer.parseInt(textView.getText().toString());
         Integer result = 0;
         switch (operator) {
             case "-":
@@ -118,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         textView.setText(result + "");
+        button.setVisibility(View.VISIBLE);
     }
 
 
@@ -131,7 +139,13 @@ public class MainActivity extends AppCompatActivity {
         }
         isOperationClick = false;
     }
+    public void onClickButton(View view) {
 
-
-
+        String result = textView.getText().toString();
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        intent.putExtra("key1", result);
+        startActivity(intent);
     }
+
+
+}

@@ -23,6 +23,16 @@
             android:maxLines="@integer/material_motion_duration_long_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+        <Button
+            android:onClick="onClickButton"
+            android:text="@string/buttontoAct"
+            android:backgroundTint="@color/orange"
+            android:id="@+id/btn_toActivity"
+            android:layout_marginHorizontal="@dimen/marginhorizontal"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </FrameLayout>
 
     <LinearLayout

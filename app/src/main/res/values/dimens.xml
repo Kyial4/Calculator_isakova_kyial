@@ -5,5 +5,15 @@
     <dimen name="marginend">18dp</dimen>
     <dimen name="marginhorizontal">18dp</dimen>
     <dimen name="paddingstart">32dp</dimen>
+    <dimen name="margintop">30dp</dimen>
+    <dimen name="margintop1">60dp</dimen>
+    <dimen name="paddingleft">4dp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="cornerradius">36dp</dimen>
+    <dimen name="marginbottom">16dp</dimen>
+    <dimen name="marginstart">120dp</dimen>
+    <dimen name="paddingvertical1">25dp</dimen>
+    <dimen name="marginvertical1">20dp</dimen>
+
 
 </resources>

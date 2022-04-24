@@ -19,4 +19,12 @@
     <string name="minus">-</string>
     <string name="dot">.</string>
     <string name="equal">=</string>
+    <string name="policies">Policies</string>
+    <string name="edittext1">Policy</string>
+    <string name="edittext2">Product Category</string>
+    <string name="edittext3">Origin Country</string>
+    <string name="edittext4">Brand</string>
+    <string name="textview1">Current Policies</string>
+    <string name="button">Export to CSV</string>
+    <string name="buttontoAct">Go to Seond Activity</string>
 </resources>
